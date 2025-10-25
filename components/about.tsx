@@ -74,8 +74,7 @@ export default function About() {
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
           >
-            Software Engineer (Andela x Safaricom), building solutions that
-            impact millions of lives across Kenya.
+            Full-Stack Software Engineer at Safaricom (via Andela), building enterprise fintech solutions that enable billions in business value.
           </motion.h2>
 
           {/* Secondary Statement */}
@@ -91,9 +90,7 @@ export default function About() {
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
           >
-            Part of Africa's elite tech talent network, passionate about
-            continuous learning, community building, and turning complex
-            problems into elegant code.
+            Delivered KES 6.6 billion in business impact through Partner Workspace (credit analytics platform), Merchant Enterprise Portal (serving 128,610+ organizations), and digital banking solutions. Recognized as top performer for exceptional problem-solving and technical leadership.
           </motion.p>
 
           {/* Professional Snapshot */}
@@ -108,8 +105,7 @@ export default function About() {
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
           >
-            Currently delivering KES 1.1B+ in business value through innovative
-            frontend solutions.
+            Part of Africa's elite tech talent network, specializing in React, TypeScript, and expanding into Java/Spring Boot for full-stack development. Passionate about building secure, scalable applications that balance technical excellence with measurable business outcomes.
           </motion.p>
         </div>
 

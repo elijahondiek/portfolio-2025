@@ -16,13 +16,13 @@ export default function Hero() {
   // const y = useTransform(scrollY, [0, 300], [0, 100])
 
   // Mission statement words for animated display
-  const missionWords = ["Building", "solutions", "that", "impact", "millions", "of", "lives", "across", "Kenya"]
+  const missionWords = ["Building", "enterprise", "fintech", "solutions", "that", "enable", "billions", "in", "business", "value"]
 
   // Floating achievements data with improved colors and styling
   const achievements = [
     {
       icon: "💰",
-      value: "KES 1.1B+",
+      value: "KES 6.6B+",
       label: "Business Impact",
       bgColor: "bg-blue-900/90",
       borderColor: "border-blue-500",
@@ -133,8 +133,9 @@ export default function Hero() {
   return (
     <motion.section
       id="home"
-      className="relative min-h-screen w-full overflow-hidden bg-gradient-to-b from-[var(--background-dark)] to-[var(--background-light)] flex items-center justify-center"
+      className="relative min-h-screen w-full overflow-x-hidden bg-gradient-to-b from-[var(--background-dark)] to-[var(--background-light)] flex items-center justify-center"
       ref={containerRef}
+      style={{ paddingTop: 'clamp(80px, 10vh, 100px)' }}
       // Removed opacity and y transform that made the hero disappear when scrolling
     >
       {/* Animated mesh background */}
@@ -182,17 +183,18 @@ export default function Hero() {
       </div>
 
       {/* Main content container */}
-      <div className="container mx-auto px-6 z-10 flex flex-col lg:flex-row items-center justify-between gap-12 pt-20 pb-16">
+      <div className="container mx-auto relative z-10 flex flex-col lg:flex-row items-center justify-between" style={{ padding: 'clamp(1.5rem, 3vw, 3rem)', paddingTop: 'clamp(2rem, 4vh, 3rem)', paddingBottom: '4rem', gap: 'clamp(2rem, 4vw, 3rem)' }}>
         {/* Left column - Main content */}
         <motion.div
-          className="w-full lg:w-7/12 space-y-6"
+          className="w-full lg:w-7/12" style={{ display: 'flex', flexDirection: 'column', gap: 'clamp(1rem, 2vw, 1.5rem)' }}
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
           {/* Animated badge */}
           <motion.div
-            className="inline-flex items-center px-3 py-1.5 rounded-full bg-gradient-to-r from-blue-500/10 to-blue-600/10 border border-blue-500/20 backdrop-blur-sm mt-8 md:mt-0"
+            className="inline-flex items-center px-3 py-1.5 rounded-full bg-gradient-to-r from-blue-500/10 to-blue-600/10 border border-blue-500/20 backdrop-blur-sm mt-8 md:mt-0 relative"
+            style={{ zIndex: 20 }}
             variants={itemVariants}
           >
             <Sparkles className="w-4 h-4 mr-2 text-blue-400" />
@@ -202,7 +204,8 @@ export default function Hero() {
           {/* Name with animated reveal */}
           <div className="overflow-visible">
             <motion.h1
-              className="text-5xl md:text-7xl font-bold tracking-tight text-[var(--text-primary)] pb-1"
+              className="font-bold tracking-tight text-[var(--text-primary)] pb-1"
+              style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)' }}
               variants={itemVariants}
             >
               Elijah Ondiek
@@ -211,13 +214,13 @@ export default function Hero() {
 
           {/* Professional title with animated underline */}
           <motion.div variants={itemVariants} className="space-y-1">
-            <h2 className="text-xl md:text-2xl font-medium text-blue-400">Andela Software Engineer</h2>
-            <p className="text-lg text-[var(--text-secondary)]">Currently at Safaricom PLC</p>
+            <h2 className="font-medium text-blue-400" style={{ fontSize: 'clamp(1.125rem, 2vw, 1.5rem)' }}>Full-Stack Software Engineer</h2>
+            <p className="text-[var(--text-secondary)]" style={{ fontSize: 'clamp(1rem, 1.5vw, 1.125rem)' }}>Safaricom PLC via Andela</p>
           </motion.div>
 
           {/* Mission statement with word-by-word animation */}
           <div className="pt-4 pb-8">
-            <motion.p className="text-xl md:text-2xl text-[var(--text-primary)] font-light leading-relaxed flex flex-wrap gap-x-2">
+            <motion.p className="text-[var(--text-primary)] font-light leading-relaxed flex flex-wrap gap-x-2" style={{ fontSize: 'clamp(1.125rem, 2vw, 1.5rem)' }}>
               {missionWords.map((word, i) => (
                 <motion.span
                   key={i}
@@ -338,7 +341,7 @@ export default function Hero() {
               <Code className="w-4 h-4 mr-2" />
               Tech Stack:
             </div>
-            {["React", "TypeScript", "Node.js", "Python", "AWS"].map((tech, i) => (
+            {["React", "TypeScript", "Next.js", "Java", "Spring Boot", "Node.js", "Python", "PostgreSQL", "AWS"].map((tech, i) => (
               <motion.span
                 key={i}
                 className="px-2.5 py-1 text-xs rounded-md bg-white/5 text-[var(--text-secondary)] border border-white/10"
@@ -351,15 +354,15 @@ export default function Hero() {
               className="px-2.5 py-1 text-xs rounded-md bg-white/5 text-[var(--text-secondary)] border border-white/10 cursor-pointer"
               whileHover={{ scale: 1.05, backgroundColor: "rgba(255, 255, 255, 0.1)" }}
             >
-              +12 more
+              +more
             </motion.span>
           </motion.div>
         </motion.div>
 
         {/* Right column - Visual elements */}
-        <div className="hidden lg:block w-full lg:w-5/12 relative">
+        <div className="hidden lg:block w-full lg:w-5/12 relative" style={{ maxWidth: '100%', overflow: 'visible' }}>
           {/* 3D layered cards effect */}
-          <div className="relative h-[400px] md:h-[500px] w-full perspective-1000">
+          <div className="relative w-full perspective-1000" style={{ height: 'clamp(350px, 40vw, 500px)', maxWidth: '100%' }}>
             {/* Main profile card */}
             <motion.div
               className="absolute inset-0 rounded-2xl overflow-hidden bg-gradient-to-br from-slate-900 to-slate-800 border border-white/10 shadow-xl [&_*]:!text-white [&_span.text-slate-500]:!text-slate-500 [&_span.text-blue-400]:!text-blue-400 [&_span.text-emerald-400]:!text-emerald-400 [&_span.text-amber-300]:!text-amber-300"
@@ -374,105 +377,140 @@ export default function Hero() {
               style={{ transformStyle: "preserve-3d" }}
             >
               {/* Card content */}
-              <div className="absolute inset-0 p-6 flex flex-col">
+              <div className="absolute inset-0 flex flex-col" style={{ padding: 'clamp(1rem, 2vw, 1.5rem)' }}>
                 {/* Card header */}
-                <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center justify-between mb-3">
                   <div className="flex space-x-1.5">
-                    <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                    <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                    <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                    <div className="w-2.5 h-2.5 rounded-full bg-red-500"></div>
+                    <div className="w-2.5 h-2.5 rounded-full bg-yellow-500"></div>
+                    <div className="w-2.5 h-2.5 rounded-full bg-green-500"></div>
                   </div>
                   <div className="text-xs text-slate-400">portfolio.tsx</div>
                 </div>
 
                 {/* Code-like visualization */}
                 <div className="flex-1 overflow-hidden">
-                  <div className="space-y-2 font-mono text-sm">
+                  <div className="font-mono space-y-1" style={{ fontSize: 'clamp(0.7rem, 1vw, 0.875rem)', lineHeight: '1.6' }}>
                     <div className="flex">
-                      <span className="text-slate-500 w-8">01</span>
+                      <span className="text-slate-500" style={{ width: 'clamp(1.5rem, 2vw, 2rem)' }}>01</span>
                       <span className="text-blue-400">const</span>
                       <span className="text-white mx-2">developer</span>
                       <span className="text-blue-400">=</span>
                       <span className="text-white mx-2">{"{"}</span>
                     </div>
-                    <div className="flex pl-8">
-                      <span className="text-slate-500 w-8">02</span>
+                    <div className="flex" style={{ paddingLeft: 'clamp(1.5rem, 2vw, 2rem)' }}>
+                      <span className="text-slate-500" style={{ width: 'clamp(1.5rem, 2vw, 2rem)' }}>02</span>
                       <span className="text-emerald-400">name:</span>
                       <span className="text-amber-300 mx-2">'Elijah Ondiek'</span>
                       <span className="text-white">,</span>
                     </div>
-                    <div className="flex pl-8">
-                      <span className="text-slate-500 w-8">03</span>
+                    <div className="flex" style={{ paddingLeft: 'clamp(1.5rem, 2vw, 2rem)' }}>
+                      <span className="text-slate-500" style={{ width: 'clamp(1.5rem, 2vw, 2rem)' }}>03</span>
                       <span className="text-emerald-400">role:</span>
-                      <span className="text-amber-300 mx-2">'Software Engineer'</span>
+                      <span className="text-amber-300 mx-2">'Full-Stack Software Engineer'</span>
                       <span className="text-white">,</span>
                     </div>
-                    <div className="flex pl-8">
-                      <span className="text-slate-500 w-8">04</span>
+                    <div className="flex" style={{ paddingLeft: 'clamp(1.5rem, 2vw, 2rem)' }}>
+                      <span className="text-slate-500" style={{ width: 'clamp(1.5rem, 2vw, 2rem)' }}>04</span>
                       <span className="text-emerald-400">company:</span>
                       <span className="text-amber-300 mx-2">'Safaricom PLC'</span>
                       <span className="text-white">,</span>
                     </div>
-                    <div className="flex pl-8">
-                      <span className="text-slate-500 w-8">05</span>
+                    <div className="flex" style={{ paddingLeft: 'clamp(1.5rem, 2vw, 2rem)' }}>
+                      <span className="text-slate-500" style={{ width: 'clamp(1.5rem, 2vw, 2rem)' }}>05</span>
+                      <span className="text-emerald-400">impact:</span>
+                      <span className="text-amber-300 mx-2">'KES 6.6B+'</span>
+                      <span className="text-white">,</span>
+                    </div>
+                    <div className="flex" style={{ paddingLeft: 'clamp(1.5rem, 2vw, 2rem)' }}>
+                      <span className="text-slate-500" style={{ width: 'clamp(1.5rem, 2vw, 2rem)' }}>06</span>
                       <span className="text-emerald-400">skills:</span>
                       <span className="text-white mx-2">[</span>
                     </div>
-                    <div className="flex pl-16">
-                      <span className="text-slate-500 w-8">06</span>
+                    <div className="flex" style={{ paddingLeft: 'clamp(3rem, 4vw, 4rem)' }}>
+                      <span className="text-slate-500" style={{ width: 'clamp(1.5rem, 2vw, 2rem)' }}>07</span>
                       <span className="text-amber-300">'React'</span>
                       <span className="text-white">,</span>
                       <span className="text-amber-300 ml-2">'TypeScript'</span>
                       <span className="text-white">,</span>
+                      <span className="text-amber-300 ml-2">'Next.js'</span>
+                      <span className="text-white">,</span>
+                    </div>
+                    <div className="flex" style={{ paddingLeft: 'clamp(3rem, 4vw, 4rem)' }}>
+                      <span className="text-slate-500" style={{ width: 'clamp(1.5rem, 2vw, 2rem)' }}>08</span>
+                      <span className="text-amber-300">'Java'</span>
+                      <span className="text-white">,</span>
+                      <span className="text-amber-300 ml-2">'Spring Boot'</span>
+                      <span className="text-white">,</span>
                       <span className="text-amber-300 ml-2">'Node.js'</span>
                       <span className="text-white">,</span>
                     </div>
-                    <div className="flex pl-16">
-                      <span className="text-slate-500 w-8">07</span>
+                    <div className="flex" style={{ paddingLeft: 'clamp(3rem, 4vw, 4rem)' }}>
+                      <span className="text-slate-500" style={{ width: 'clamp(1.5rem, 2vw, 2rem)' }}>09</span>
                       <span className="text-amber-300">'Python'</span>
                       <span className="text-white">,</span>
-                      <span className="text-amber-300 ml-2">'AWS'</span>
+                      <span className="text-amber-300 ml-2">'PostgreSQL'</span>
                       <span className="text-white">,</span>
-                      <span className="text-amber-300 ml-2">'GraphQL'</span>
+                      <span className="text-amber-300 ml-2">'AWS'</span>
                     </div>
-                    <div className="flex pl-8">
-                      <span className="text-slate-500 w-8">08</span>
+                    <div className="flex" style={{ paddingLeft: 'clamp(1.5rem, 2vw, 2rem)' }}>
+                      <span className="text-slate-500" style={{ width: 'clamp(1.5rem, 2vw, 2rem)' }}>10</span>
                       <span className="text-white">]</span>
                       <span className="text-white">,</span>
                     </div>
-                    <div className="flex pl-8">
-                      <span className="text-slate-500 w-8">09</span>
-                      <span className="text-emerald-400">projects:</span>
-                      <span className="text-purple-400 mx-2">() =&gt;</span>
-                      <span className="text-white">fetchProjects()</span>
+                    <div className="flex" style={{ paddingLeft: 'clamp(1.5rem, 2vw, 2rem)' }}>
+                      <span className="text-slate-500" style={{ width: 'clamp(1.5rem, 2vw, 2rem)' }}>11</span>
+                      <span className="text-emerald-400">achievements:</span>
+                      <span className="text-white mx-2">{"{"}</span>
+                    </div>
+                    <div className="flex" style={{ paddingLeft: 'clamp(3rem, 4vw, 4rem)' }}>
+                      <span className="text-slate-500" style={{ width: 'clamp(1.5rem, 2vw, 2rem)' }}>12</span>
+                      <span className="text-emerald-400">businessValue:</span>
+                      <span className="text-amber-300 mx-2">'6.6B KES'</span>
                       <span className="text-white">,</span>
                     </div>
-                    <div className="flex pl-8">
-                      <span className="text-slate-500 w-8">10</span>
+                    <div className="flex" style={{ paddingLeft: 'clamp(3rem, 4vw, 4rem)' }}>
+                      <span className="text-slate-500" style={{ width: 'clamp(1.5rem, 2vw, 2rem)' }}>13</span>
+                      <span className="text-emerald-400">organizations:</span>
+                      <span className="text-amber-300 mx-2">'128K+'</span>
+                      <span className="text-white">,</span>
+                    </div>
+                    <div className="flex" style={{ paddingLeft: 'clamp(3rem, 4vw, 4rem)' }}>
+                      <span className="text-slate-500" style={{ width: 'clamp(1.5rem, 2vw, 2rem)' }}>14</span>
+                      <span className="text-emerald-400">rating:</span>
+                      <span className="text-amber-300 mx-2">'Top Performer'</span>
+                    </div>
+                    <div className="flex" style={{ paddingLeft: 'clamp(1.5rem, 2vw, 2rem)' }}>
+                      <span className="text-slate-500" style={{ width: 'clamp(1.5rem, 2vw, 2rem)' }}>15</span>
+                      <span className="text-white">{"}"}</span>
+                      <span className="text-white">,</span>
+                    </div>
+                    <div className="flex" style={{ paddingLeft: 'clamp(1.5rem, 2vw, 2rem)' }}>
+                      <span className="text-slate-500" style={{ width: 'clamp(1.5rem, 2vw, 2rem)' }}>16</span>
                       <span className="text-emerald-400">contact:</span>
                       <span className="text-white mx-2">{"{"}</span>
                     </div>
-                    <div className="flex pl-16">
-                      <span className="text-slate-500 w-8">11</span>
+                    <div className="flex" style={{ paddingLeft: 'clamp(3rem, 4vw, 4rem)' }}>
+                      <span className="text-slate-500" style={{ width: 'clamp(1.5rem, 2vw, 2rem)' }}>17</span>
                       <span className="text-emerald-400">email:</span>
                       <span className="text-amber-300 mx-2">'eochieng9448@gmail.com'</span>
                     </div>
-                    <div className="flex pl-8">
-                      <span className="text-slate-500 w-8">12</span>
+                    <div className="flex" style={{ paddingLeft: 'clamp(1.5rem, 2vw, 2rem)' }}>
+                      <span className="text-slate-500" style={{ width: 'clamp(1.5rem, 2vw, 2rem)' }}>18</span>
                       <span className="text-white">{"}"}</span>
                     </div>
                     <div className="flex">
-                      <span className="text-slate-500 w-8">13</span>
+                      <span className="text-slate-500" style={{ width: 'clamp(1.5rem, 2vw, 2rem)' }}>19</span>
                       <span className="text-white">{"}"}</span>
                     </div>
                   </div>
                 </div>
 
                 {/* Card footer */}
-                <div className="mt-4 flex justify-between items-center text-xs text-slate-400">
+                <div className="mt-3 flex justify-between items-center text-slate-400" style={{ fontSize: 'clamp(0.65rem, 0.8vw, 0.75rem)' }}>
                   <div className="flex items-center">
                     <div className="w-2 h-2 rounded-full bg-green-500 mr-2"></div>
-                    <span>Online and coding</span>
+                    <span>💼 Open to opportunities | 🚀 MySacco Platform Launch</span>
                   </div>
                   <div>Last commit: Today</div>
                 </div>
@@ -510,14 +548,18 @@ export default function Hero() {
           </div>
 
           {/* Achievement cards positioned at the middle of each side of the profile card on desktop */}
-          <div className="absolute inset-0 pointer-events-none hidden md:block">
+          <div className="absolute inset-0 pointer-events-none hidden lg:block">
             {achievements.map((achievement, index) => {
-              // Desktop positioning (centered on each side)
+              // Desktop positioning - optimized for laptop screens to prevent overflow and navbar overlap
               let positionClass = ""
-              if (index === 0) positionClass = "top-[-20%] left-1/2 -translate-x-1/2" // Top
-              if (index === 1) positionClass = "right-[-20%] top-1/2 -translate-y-1/2" // Right
-              if (index === 2) positionClass = "bottom-[-20%] left-1/2 -translate-x-1/2" // Bottom
-              if (index === 3) positionClass = "left-[-15%] top-1/2 -translate-y-1/2" // Left
+              // Top card: Moved down to avoid navbar overlap, stays safe on laptops
+              if (index === 0) positionClass = "top-[5%] lg:top-[2%] xl:top-[-8%] 2xl:top-[-20%] left-1/2 -translate-x-1/2"
+              // Right card: Reduced offset to prevent viewport overflow on smaller screens
+              if (index === 1) positionClass = "right-[-5%] lg:right-[-8%] xl:right-[-12%] 2xl:right-[-20%] top-1/2 -translate-y-1/2"
+              // Bottom card: Safe positioning
+              if (index === 2) positionClass = "bottom-[-8%] xl:bottom-[-12%] 2xl:bottom-[-20%] left-1/2 -translate-x-1/2"
+              // Left card: Slightly reduced for balance
+              if (index === 3) positionClass = "left-[-5%] lg:left-[-8%] xl:left-[-10%] 2xl:left-[-15%] top-1/2 -translate-y-1/2"
 
               // Active state
               const isActive = index === activeIndex
@@ -525,7 +567,8 @@ export default function Hero() {
               return (
                 <motion.div
                   key={`desktop-${index}`}
-                  className={`absolute ${positionClass} z-20`}
+                  className={`absolute ${positionClass}`}
+                  style={{ zIndex: 30 }}
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{
                     opacity: isActive ? 1 : 0.85,
@@ -538,7 +581,8 @@ export default function Hero() {
                 >
                   {/* Achievement card with better visibility */}
                   <motion.div
-                    className={`backdrop-blur-md border-2 ${achievement.borderColor} rounded-xl shadow-lg shadow-black/30 w-[220px] p-3 bg-slate-900/95 [&_*]:!text-white [&_div.text-sm]:!text-slate-300`}
+                    className={`backdrop-blur-md border-2 ${achievement.borderColor} rounded-xl shadow-lg shadow-black/30 p-3 bg-slate-900/95 [&_*]:!text-white [&_div.text-sm]:!text-slate-300`}
+                    style={{ width: 'clamp(180px, 15vw, 220px)' }}
                     whileHover={{ scale: 1.05, opacity: 1 }}
                     animate={
                       isActive

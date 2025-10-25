@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 const achievements = [
   {
     icon: "💰",
-    value: "KES 1.1B+",
+    value: "KES 6.6B+",
     label: "Business Impact",
     bgColor: "bg-blue-900/90",
     borderColor: "border-blue-500",

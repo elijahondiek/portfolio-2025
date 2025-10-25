@@ -18,13 +18,14 @@ const baseUrl = isProduction
 
   export const metadata: Metadata = {
     title: {
-      default: "Elijah Ondiek | Software Engineer",
+      default: "Elijah Ondiek | Full-Stack Software Engineer",
       template: "%s | Elijah Ondiek"
     },
-    description: "Explore the work of Elijah Ondiek, a passionate software engineer specializing in scalable, high-performance full-stack applications built with React, Next.js, TypeScript, and Python. Delivering user-centric digital solutions with clean code and modern architecture.",
+    description: "Explore the work of Elijah Ondiek, a Full-Stack Software Engineer at Safaricom (via Andela) specializing in enterprise fintech solutions. Building scalable applications with React, TypeScript, Next.js, Java, Spring Boot, and Python that enable billions in business value.",
     
     keywords: [
       "Elijah Ondiek",
+      "Full-Stack Software Engineer",
       "Software Engineer",
       "Web Engineer",
       "Full Stack Developer",
@@ -34,8 +35,14 @@ const baseUrl = isProduction
       "Next.js Developer",
       "JavaScript Developer",
       "TypeScript Developer",
+      "Java Developer",
+      "Spring Boot Developer",
       "Python Developer",
       "Node.js Developer",
+      "PostgreSQL",
+      "AWS Developer",
+      "Fintech Solutions",
+      "Enterprise Applications",
       "Tailwind CSS",
       "Web Performance Optimization",
       "Open Source Contributor",
@@ -44,6 +51,8 @@ const baseUrl = isProduction
       "Clean Code Architecture",
       "Digital Solutions",
       "Kenya Software Engineer",
+      "Safaricom",
+      "Andela",
       "East Africa Developer",
       "Scalable Web Apps"
     ],
@@ -52,7 +61,7 @@ const baseUrl = isProduction
     creator: "Elijah Ondiek",
     publisher: "Elijah Ondiek",
     generator: 'Next.js',
-    applicationName: "Elijah Ondiek - Software Engineer",
+    applicationName: "Elijah Ondiek - Full-Stack Software Engineer",
     referrer: 'origin-when-cross-origin',
     formatDetection: {
       email: false,
@@ -69,9 +78,9 @@ const baseUrl = isProduction
       type: 'website',
       locale: 'en_US',
       url: baseUrl,
-      title: "Elijah Ondiek | Software Engineer",
-      description: "Discover Elijah Ondiek, a dedicated software engineer crafting innovative full-stack web solutions with React, Next.js, and Python.",
-      siteName: "Elijah Ondiek - Software Engineer",
+      title: "Elijah Ondiek | Full-Stack Software Engineer",
+      description: "Discover Elijah Ondiek, a Full-Stack Software Engineer at Safaricom (via Andela) building enterprise fintech solutions that enable KES 6.6B+ in business value.",
+      siteName: "Elijah Ondiek - Full-Stack Software Engineer",
       images: [
         {
           url: '/og-image.jpg',
@@ -90,22 +99,6 @@ const baseUrl = isProduction
       ],
     },
   
-    // Twitter metadata
-    twitter: {
-      card: 'summary_large_image',
-      title: "Elijah Ondiek | Software Engineer",
-      description: "Professional software engineer specializing in modern web technologies, scalable full-stack solutions, and clean architecture.",
-      creator: '@0chibo_',
-      site: '@0chibo_',
-      images: [
-        {
-          url: '/og-image.jpg',
-          width: 1200,
-          height: 630,
-          alt: "Elijah Ondiek - Software Engineer",
-        }
-      ],
-    },
   };
   
 
@@ -152,20 +145,24 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Person",
               "name": "Elijah Ondiek",
-              "jobTitle": "Software Engineer",
-              "description": "Passionate software engineer specializing in modern web engineering",
+              "jobTitle": "Full-Stack Software Engineer",
+              "description": "Full-Stack Software Engineer at Safaricom (via Andela) specializing in enterprise fintech solutions",
               "url": baseUrl,
               "sameAs": [
                 process.env.NEXT_PUBLIC_GITHUB_URL,
                 process.env.NEXT_PUBLIC_LINKEDIN_URL,
-                process.env.NEXT_PUBLIC_TWITTER_URL,
               ].filter(Boolean),
               "email": process.env.NEXT_PUBLIC_EMAIL,
               "knowsAbout": [
                 "JavaScript",
-                "TypeScript", 
+                "TypeScript",
                 "React",
                 "Next.js",
+                "Java",
+                "Spring Boot",
+                "Python",
+                "PostgreSQL",
+                "AWS",
                 "Web Development",
                 "Software Engineering"
               ],

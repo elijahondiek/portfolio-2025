@@ -7,7 +7,6 @@ import {
   X,
   Github,
   Linkedin,
-  Twitter,
   Mail,
   FileText,
 } from "lucide-react";
@@ -79,11 +78,6 @@ export default function Navigation() {
       name: "LinkedIn",
       href: process.env.NEXT_PUBLIC_LINKEDIN_URL || "https://www.linkedin.com/in/ondiek-elijah/",
       icon: <Linkedin className="w-5 h-5" />,
-    },
-    {
-      name: "Twitter",
-      href: process.env.NEXT_PUBLIC_TWITTER_URL || "https://x.com/0chibo_",
-      icon: <Twitter className="w-5 h-5" />,
     },
     {
       name: "Email",

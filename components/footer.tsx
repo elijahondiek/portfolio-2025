@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { Github, Linkedin, Twitter, Mail, Sun, Moon, Heart, Wifi } from "lucide-react"
+import { Github, Linkedin, Mail, Sun, Moon, Heart, Wifi } from "lucide-react"
 import { useTheme } from "next-themes"
 
 export default function Footer() {
@@ -108,7 +108,6 @@ export default function Footer() {
   const socialLinks = [
     { name: "GitHub", href: process.env.NEXT_PUBLIC_GITHUB_URL || "https://github.com/elijahondiekashbased", icon: <Github className="w-5 h-5" /> },
     { name: "LinkedIn", href: process.env.NEXT_PUBLIC_LINKEDIN_URL || "https://www.linkedin.com/in/ondiek-elijah/", icon: <Linkedin className="w-5 h-5" /> },
-    { name: "Twitter", href: process.env.NEXT_PUBLIC_TWITTER_URL || "https://x.com/0chibo_", icon: <Twitter className="w-5 h-5" /> },
     { name: "Email", href: `mailto:${process.env.NEXT_PUBLIC_EMAIL || "eochieng9448@gmail.com"}`, icon: <Mail className="w-5 h-5" /> },
   ]
 

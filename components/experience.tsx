@@ -326,7 +326,7 @@ export default function Experience() {
                     S
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold mb-1">Software Engineer</h3>
+                    <h3 className="text-2xl font-bold mb-1">Full-Stack Software Engineer</h3>
                     <div className="flex items-center space-x-4 text-[#b4bcd0]">
                       <div className="flex items-center space-x-1">
                         <Building2 className="w-4 h-4" />

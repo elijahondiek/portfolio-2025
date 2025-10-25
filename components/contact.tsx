@@ -6,7 +6,6 @@ import { useState, useRef, useEffect } from "react";
 import {
   Github,
   Linkedin,
-  Twitter,
   Mail,
   FileText,
   MapPin,
@@ -183,13 +182,6 @@ export default function Contact() {
       icon: <Github className="w-6 h-6" />,
       description: "Code repositories",
       followers: "116+ repositories",
-    },
-    {
-      name: "Twitter",
-      href: process.env.NEXT_PUBLIC_TWITTER_URL || "https://x.com/0chibo_",
-      icon: <Twitter className="w-6 h-6" />,
-      description: "Tech insights",
-      followers: "2630+ followers",
     },
   ];
 
@@ -389,7 +381,7 @@ export default function Contact() {
             <div className="space-y-4">
               <div>
                 <p className="text-[#b4bcd0] text-sm">Current Role</p>
-                <p className="font-medium">Software Engineer</p>
+                <p className="font-medium">Full-Stack Software Engineer</p>
                 <p className="text-[#00d4ff] text-sm">@ Safaricom PLC</p>
               </div>
 
