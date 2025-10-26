@@ -347,7 +347,7 @@ export default function SidebarNavigationLayout({
                         className={`px-2 py-1 text-xs rounded-lg transition-all duration-300 ${
                           activeCategory === category
                             ? "text-[#0a0f1c]"
-                            : "glass-card hover:border-[#00d4ff] hover:shadow-lg"
+                            : "glass-card"
                         }`}
                         style={
                           activeCategory === category
@@ -371,7 +371,7 @@ export default function SidebarNavigationLayout({
                       className={`px-2 py-1 text-xs rounded-lg transition-all duration-300 ${
                         activeCategory === category
                           ? "text-[#0a0f1c]"
-                          : "glass-card hover:border-[#00d4ff] hover:shadow-lg"
+                          : "glass-card"
                       }`}
                       style={
                         activeCategory === category
@@ -404,7 +404,7 @@ export default function SidebarNavigationLayout({
                     className={`w-full text-left p-3 rounded-lg transition-colors duration-300 ${
                       selectedItem.id === item.id
                         ? "bg-gradient-to-r from-[#00d4ff]/20 to-[#00ff88]/20 border-l-4 border-[#00d4ff]"
-                        : "glass-card hover:border-[var(--accent-primary)] hover:shadow-lg"
+                        : "glass-card"
                     }`}
                     style={{ transform: "none" }}
                   >

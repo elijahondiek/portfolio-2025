@@ -706,7 +706,7 @@ export default function ProjectsSidebar() {
                     key={category}
                     onClick={() => setActiveCategory(category)}
                     className={`px-2 py-1 text-xs rounded-lg transition-all duration-300 ${
-                      activeCategory === category ? "text-[#0a0f1c]" : "glass-card hover:text-[#00d4ff]"
+                      activeCategory === category ? "text-[#0a0f1c]" : "glass-card"
                     }`}
                     style={
                       activeCategory === category
@@ -724,7 +724,7 @@ export default function ProjectsSidebar() {
                     key={category}
                     onClick={() => setActiveCategory(category)}
                     className={`px-2 py-1 text-xs rounded-lg transition-all duration-300 ${
-                      activeCategory === category ? "text-[#ffff]" : "glass-card hover:text-[#00d4ff]"
+                      activeCategory === category ? "text-[#ffff]" : "glass-card"
                     }`}
                     style={
                       activeCategory === category
@@ -750,7 +750,7 @@ export default function ProjectsSidebar() {
                     className={`w-full text-left p-3 rounded-lg  ${
                       selectedProject?.id === project.id
                         ? " border-l-4 border-[#00d4ff]"
-                        : "glass-card hover:bg-white/10"
+                        : "glass-card"
                     }`}
                     style={{ transform: "none" }}
                   >
@@ -783,7 +783,7 @@ export default function ProjectsSidebar() {
                         setSearchQuery("")
                         setActiveCategory("All")
                       }}
-                      className="mt-2 text-[#00d4ff] text-sm hover:underline"
+                      className="mt-2 text-[#00d4ff] text-sm"
                     >
                       Clear filters
                     </button>
@@ -955,7 +955,7 @@ export default function ProjectsSidebar() {
                       <button
                         key={project.id}
                         onClick={() => handleProjectSelect(project)}
-                        className="glass-card p-4 rounded-lg text-left transition-all duration-300 hover:scale-105 hover:shadow-lg w-full"
+                        className="glass-card p-4 rounded-lg text-left transition-all duration-300 w-full"
                         aria-label={`View details for ${project.title}`}
                       >
                         <div className="flex items-center space-x-2 mb-2">
