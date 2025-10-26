@@ -106,7 +106,7 @@ export default function Navigation() {
             onClick={() => setActiveSection("home")}
           >
             <span
-              className="text-transparent bg-gradient-to-r from-accent-primary to-accent-secondary bg-clip-text"
+              className="text-transparent bg-gradient-to-r from-accent-primary to-accent-secondary bg-clip-text font-mono"
               style={{
                 backgroundImage:
                   theme === "light"
@@ -114,7 +114,7 @@ export default function Navigation() {
                     : "linear-gradient(to right, #00d4ff, #00ff88)",
               }}
             >
-              Elijah Ondiek
+              ondiek/
             </span>
           </Link>
 

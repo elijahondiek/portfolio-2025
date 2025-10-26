@@ -121,21 +121,21 @@ export default function Footer() {
             <div>
               <Link
                 href="#home"
-                className="text-2xl font-bold mb-4 inline-block text-transparent"
+                className="text-2xl font-bold mb-4 inline-block text-transparent font-mono"
                 style={{
                   backgroundImage: "linear-gradient(to right, #00d4ff, #00ff88)",
                   WebkitBackgroundClip: "text",
                   backgroundClip: "text",
                 }}
               >
-                Elijah Ondiek
+                ondiek/
               </Link>
               <p className="text-[#b4bcd0] mb-4">
                 Software Engineer specializing in creating exceptional digital experiences.
               </p>
               <div className="flex items-center text-[#b4bcd0]">
-                <span className="flex items-center">
-                  Made with <Heart className="w-4 h-4 text-[#ff6b6b] mx-1" fill="#ff6b6b" /> in Kenya
+                <span>
+                  Straight outta 254 — lint-free (mostly).
                 </span>
               </div>
             </div>
