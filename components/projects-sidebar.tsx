@@ -889,8 +889,7 @@ export default function ProjectsSidebar() {
 
               <div className="space-y-8">
                 <div>
-                  <h3 className="text-xl font-semibold mb-4 flex items-center">
-                    <Globe className="w-5 h-5 mr-2 text-[#00d4ff]" />
+                  <h3 className="text-xl font-semibold mb-4">
                     Overview
                   </h3>
                   <p className="text-[#b4bcd0] leading-relaxed">{selectedProject?.longDescription}</p>
@@ -905,16 +904,13 @@ export default function ProjectsSidebar() {
                 </div>
 
                 <div>
-                  <h3 className="text-xl font-semibold mb-4 flex items-center">
-                    <Zap className="w-5 h-5 mr-2 text-[#00ff88]" />
+                  <h3 className="text-xl font-semibold mb-4">
                     Key Features
                   </h3>
                   <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                     {selectedProject?.features.map((feature, index) => (
                       <li key={index} className="flex items-start space-x-2 glass-card p-3 rounded-lg">
-                        <div className="w-5 h-5 rounded-full bg-[#00ff88]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <div className="w-2 h-2 rounded-full bg-[#00ff88]"></div>
-                        </div>
+                        <div className="w-2 h-2 rounded-full bg-[#00ff88] flex-shrink-0 mt-1.5"></div>
                         <span className="text-[#b4bcd0]">{feature}</span>
                       </li>
                     ))}
@@ -927,9 +923,7 @@ export default function ProjectsSidebar() {
                     <ul className="space-y-3">
                       {selectedProject?.challenges.map((challenge, index) => (
                         <li key={index} className="flex items-start space-x-2">
-                          <div className="w-5 h-5 rounded-full bg-[#ff6b6b]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                            <div className="w-2 h-2 rounded-full bg-[#ff6b6b]"></div>
-                          </div>
+                          <div className="w-2 h-2 rounded-full bg-[#ff6b6b] flex-shrink-0 mt-1.5"></div>
                           <span className="text-[#b4bcd0]">{challenge}</span>
                         </li>
                       ))}
@@ -941,9 +935,7 @@ export default function ProjectsSidebar() {
                     <ul className="space-y-3">
                       {selectedProject?.solutions.map((solution, index) => (
                         <li key={index} className="flex items-start space-x-2">
-                          <div className="w-5 h-5 rounded-full bg-[#00d4ff]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                            <div className="w-2 h-2 rounded-full bg-[#00d4ff]"></div>
-                          </div>
+                          <div className="w-2 h-2 rounded-full bg-[#00d4ff] flex-shrink-0 mt-1.5"></div>
                           <span className="text-[#b4bcd0]">{solution}</span>
                         </li>
                       ))}
