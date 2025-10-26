@@ -106,7 +106,7 @@ export default function Footer() {
   ]
 
   const socialLinks = [
-    { name: "GitHub", href: process.env.NEXT_PUBLIC_GITHUB_URL || "https://github.com/elijahondiekashbased", icon: <Github className="w-5 h-5" /> },
+    { name: "GitHub", href: process.env.NEXT_PUBLIC_GITHUB_URL || "https://github.com/elijahondiek", icon: <Github className="w-5 h-5" /> },
     { name: "LinkedIn", href: process.env.NEXT_PUBLIC_LINKEDIN_URL || "https://www.linkedin.com/in/ondiek-elijah/", icon: <Linkedin className="w-5 h-5" /> },
     { name: "Email", href: `mailto:${process.env.NEXT_PUBLIC_EMAIL || "eochieng9448@gmail.com"}`, icon: <Mail className="w-5 h-5" /> },
   ]
