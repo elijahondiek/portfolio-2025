@@ -2,7 +2,7 @@
 
 import { useRef, useEffect, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { ArrowRight, ChevronDown, ExternalLink, Code, Sparkles, FileText } from "lucide-react"
+import { ArrowRight, ChevronDown, ExternalLink, Code, FileText } from "lucide-react"
 
 export default function Hero() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -191,16 +191,6 @@ export default function Hero() {
           initial="hidden"
           animate="visible"
         >
-          {/* Animated badge */}
-          <motion.div
-            className="inline-flex items-center px-3 py-1.5 rounded-full bg-gradient-to-r from-blue-500/10 to-blue-600/10 border border-blue-500/20 backdrop-blur-sm mt-8 md:mt-0 relative"
-            style={{ zIndex: 20 }}
-            variants={itemVariants}
-          >
-            <Sparkles className="w-4 h-4 mr-2 text-blue-400" />
-            <span className="text-sm font-medium text-blue-400">Software Engineer Portfolio</span>
-          </motion.div>
-
           {/* Name with animated reveal */}
           <div className="overflow-visible">
             <motion.h1
