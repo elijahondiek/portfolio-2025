@@ -411,7 +411,7 @@ export default function Contact() {
         {/* Download Resources Section */}
         <div className="flex flex-col lg:flex-row justify-center gap-8 mb-6">
           {/* Buy Me a Coffee Card */}
-          <div className="flex-1 w-full">
+          <div className="flex-1 w-full max-w-md mx-auto">
             <div className="relative">
               {/* Floating Icon */}
               <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 z-20">
@@ -457,10 +457,9 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Viber Coder Tips Handbook Card */}
-          <div className="flex-1 max-w-md mx-auto">
+          {/* Viber Coder Tips Handbook Card - Temporarily Commented Out */}
+          {/* <div className="flex-1 max-w-md mx-auto">
             <div className="relative">
-              {/* Floating Icon */}
               <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 z-20">
                 <div
                   className="w-16 h-16 rounded-2xl flex items-center justify-center shadow-2xl animate-float"
@@ -483,7 +482,6 @@ export default function Contact() {
                   insights and proven strategies.
                 </p>
 
-                {/* Strong CTA */}
                 <div className="space-y-3 flex flex-col items-center">
                   <GradientMagicButton
                     href="https://eochieng.gumroad.com/l/awhmp"
@@ -499,7 +497,7 @@ export default function Contact() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* Call to Action */}
